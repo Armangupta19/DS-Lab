@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int n, key, i;
+
+    // Prompt for the size of the array
+    // printf("Enter the size of the array: ");
+    if (scanf("%d", &n) != 1) return 1;
+
+    int arr[n];
+
+    // Prompt for the elements of the array
+    // printf("Enter the elements of the array: ");
+    for (i = 0; i < n; i++) {
+        if (scanf("%d", &arr[i]) != 1) return 1;
+    }
+
+    // Prompt for the element to search for
+    // printf("Enter the element to search for: ");
+    if (scanf("%d", &key) != 1) return 1;
+
+    // Perform linear search
+    for (i = 0; i < n; i++) {
+        if (arr[i] == key) {
+            printf("found at position %d\n", i);
+            return 0; // Element found, exit the program
+        }
+    }
+
+    // Element not found
+    printf("%d not found\n", key);
+
+    return 0;
+}
+
